@@ -319,25 +319,24 @@ button:hover {
 @keyframes cursor {
   to {
     border-left: 3px solid #00BFFF;
-
   }
 }
 
 @keyframes words {
   0%, 20% {
-    content: 'Web Developer';
+    content: 'Estudante';
   }
   21%, 40% {
-    content: 'Software Developer';
+    content: 'Assistente';
   }
   41%, 60% {
-    content: 'Web Designer';
+    content: 'Técnico T.I';
   }
   61%, 80% {
-    content: 'Photographer';
+    content: 'Fotográfo';
   }
   81%, 100% {
-    content: 'Youtuber';
+    content: 'Entusiasta';
   }
 }
 
@@ -392,4 +391,75 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+}
+
+/* Páginas do serviços */
+
+.services{
+  background: var(--second-bg-color);
+}
+
+ 
+
+.services-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.service-box {
+  background-color: var(--main-color);
+  height: 300px;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.service-box:hover {
+  background: transparent;
+  color: var(--text-color);
+  transform: scale(1.03);
+  border: 1px solid var(--main-color);
+}
+
+.service-box .service-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-height: 200px;
+  justify-content: center;
+  align-items: center;
+  padding: 5em;
+}
+
+.service-info h4{
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.service-info p{
+  font-size: 1.6rem;
+  font-weight: 400;
+  max-height: 100px;
+  margin: auto;
+}
+
+@media (max-widh:991px) {
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  .services {
+    padding-bottom: 7rem;
+  }
+}
+
+@media (max-widh:895px) {
+  .services h2 {
+    margin-bottom: 3rem;
+  }
+  .services-container {
+    grid-template-columns: repeat(1,1fr);
+  }
 }
